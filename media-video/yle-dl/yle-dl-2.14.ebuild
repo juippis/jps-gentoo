@@ -14,7 +14,7 @@ DESCRIPTION="Download media files from Yle Areena"
 HOMEPAGE="http://aajanki.github.io/yle-dl/"
 SRC_URI="https://github.com/aajanki/yle-dl/tarball/${PV} -> ${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 
