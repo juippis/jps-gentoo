@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>jps-gentoo</name>
+		<description>Random set of ebuilds, focus on Finnish software.</description>
+		<homepage>https://github.com/juippis/jps-gentoo</homepage>
+		<owner>
+			<email>juippis@gmail.com</email>
+		</owner>
+		<source type="git">https://github.com/juippis/jps-gentoo.git</source>
+	</repo>
+</repositories>
