@@ -8,13 +8,8 @@ inherit autotools eutils vcs-snapshot fdo-mime gnome2-utils
 
 DESCRIPTION="A GTK2 image viewer, manga reader, and booru browser"
 HOMEPAGE="https://github.com/ahodesuka/ahoviewer"
+SRC_URI="https://github.com/ahodesuka/ahoviewer/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-if [[ ${PV} = 9999 ]]; then
-    EGIT_REPO_URI="https://github.com/ahodesuka/ahoviewer.git"
-    inherit git-r3
-else
-    SRC_URI="https://github.com/ahodesuka/ahoviewer/archive/${PV}.tar.gz -> ${PN}-${PV}.tar.gz"
-fi
 
 LICENSE="MIT"
 SLOT="0"
