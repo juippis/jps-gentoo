@@ -12,7 +12,7 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
 
 ### Installing
 #### With Layman
-layman -a jps-gentoo
+layman -o https://raw.githubusercontent.com/juippis/jps-gentoo/master/jps-gentoo.xml -f -a jps-gentoo
 
 #### With just GIT
 git clone https://github.com/juippis/jps-gentoo.git
