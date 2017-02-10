@@ -2,13 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-# http://www.kosunen.fi/gentoo/portage/media-video/rtmpdump-yle/rtmpdump-yle-1.3.0.ebuild
-# retrieved on 2011-11-26, and updated for 1.4.5 by teknohog
+EAPI=6
+PYTHON_COMPAT=(python2_7)
 
-EAPI=4
-PYTHON_DEPEND="2"
-
-inherit python
+inherit python-single-r1
 
 DESCRIPTION="Download media files from Yle Areena"
 HOMEPAGE="http://aajanki.github.io/yle-dl/"
@@ -24,35 +21,45 @@ REQUIRED_USE="
 	|| ( php youtube-dl )
 "
 
-DEPEND="dev-python/pycrypto
-	media-video/rtmpdump
-	!media-video/rtmpdump-yle
-	net-misc/youtube-dl
+DEPEND="
+	dev-python/pycrypto
 	php? ( 
-		dev-lang/php[bcmath,curl,mcrypt,simplexml]
-	)"
+		dev-lang/php[bcmath,curl,mcrypt,simplexml] 
+		media-video/rtmpdump
+	)
+	youtube-dl? ( net-misc/youtube-dl )
+"
 
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/aajanki-${PN}-440ecb2
 
 src_prepare() {
-	sed -i 's|/usr/local/share/yle-dl/AdobeHDS.php|/usr/bin/AdobeHDS.php|g' yle-dl	
-}
+	python_fix_shebang .
 
-src_compile() {
-	if [ -f Makefile ]; then
-		emake -j1 prefix="${DESTTREE}" || die "emake failed"
-	fi
+	sed -i 's|/usr/local|/usr|g' Makefile
+
+	if use !php ; then
+		#sed -i '/AdobeHDS.php/d' Makefile
+		sed -i '/$(DATADIR)/d' Makefile
+	fi		
+
+	sed -i 's|/usr/local/share/yle-dl/AdobeHDS.php|/usr/bin/AdobeHDS.php|g' yle-dl
+	#esetup.py --root="${D}" AdobeHDS.php
+
+	# only causes troubles, will maybe fix later
+	# if use !php ; then 
+	#	sed -i "/DEFAULT_HDS_BACKENDS/s/\[.*\]/\['youtubedl'\]/" yle-dl
+	# fi
+
+	default
 }
 
 src_install() {
-	einstall
-	dobin ${S}/AdobeHDS.php
-}
-
-pkg_setup() {
-	python_set_active_version 2
+	emake DESTDIR="${D}" install 
+	
+	DOCS="COPYING ChangeLog README.fi README.md"
+	einstalldocs
 }
 
 pkg_postinst() { 
