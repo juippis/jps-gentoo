@@ -6,12 +6,16 @@ EAPI=5
 
 DESCRIPTION="Additional proprietary codecs for Vivaldi web browser, stable release."
 HOMEPAGE="http://www.vivaldi.net"
-SRC_URI="http://repo.herecura.eu/herecura/x86_64/${P}-1-x86_64.pkg.tar.xz"
 
 LICENSE="LGPL2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+SRC_URI="
+	amd64? ( http://repo.herecura.eu/herecura/x86_64/${P}-1-x86_64.pkg.tar.xz )
+	x86? ( http://repo.herecura.eu/herecura/i686/${P}-1-i686.pkg.tar.xz )
+"
 
 DEPEND="www-client/vivaldi"
 RDEPEND="${DEPEND}"
