@@ -24,7 +24,7 @@ REQUIRED_USE="
 DEPEND="
 	dev-python/pycrypto
 	php? ( 
-		dev-lang/php[bcmath,curl,mcrypt,simplexml] 
+		dev-lang/php:*[bcmath,curl,mcrypt,simplexml] 
 		media-video/rtmpdump
 	)
 	youtube-dl? ( net-misc/youtube-dl )
