@@ -17,7 +17,7 @@ SRC_URI="
 	x86? ( http://repo.herecura.eu/herecura/i686/${P}-1-i686.pkg.tar.xz )
 "
 
-DEPEND="www-client/vivaldi"
+DEPEND="=www-client/vivaldi-1.7.735.46_p1"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
