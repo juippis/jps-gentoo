@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="Additional proprietary codecs for Vivaldi web browser, stable release."
+DESCRIPTION="Additional proprietary codecs for Vivaldi web browser."
 HOMEPAGE="http://www.vivaldi.net"
 
 LICENSE="LGPL2.1"
