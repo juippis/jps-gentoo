@@ -29,8 +29,11 @@ pkg_setup() {
     if [[ -e "${ROOT}opt/vivaldi/vivaldi" ]]; then
         export VIVALDIVER="vivaldi"
 
-    else
+    elif [[ -e "${ROOT}opt/vivaldi-snapshot/vivaldi" ]]; then
         export VIVALDIVER="vivaldi-snapshot"
+
+	else 
+		export VIVALDIVER=""
     fi
 }
 
@@ -39,6 +42,10 @@ src_unpack() {
 }
 
 src_install() {
+
+	if [[ ${VIVALDIVER} == "" ]]; then
+		die || "Is Vivaldi installed?"
+	fi 
 
 	cd ${S}
 	mkdir -p ${D}/opt/${VIVALDIVER}/
