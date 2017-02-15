@@ -31,5 +31,5 @@ Then issue
 
 (and optionally *vivaldi-ffmpeg-codecs* as well)
 
-Then keep updating your system regularily to follow the latest stable releases. 
+Then keep updating your system regularly to follow the latest stable releases. 
 
