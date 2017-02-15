@@ -9,7 +9,7 @@ inherit eutils versionator multilib
 #MY_P="${P/office-voikko/office.org-voikko}"
 #MY_PN="${PN/office-voikko/office.org-voikko}"
 
-DESCRIPTION="Free Finnish spell checking and hyphenation for OpenOffice"
+DESCRIPTION="Free Finnish spell checking and hyphenation for LibreOffice"
 IUSE=""
 HOMEPAGE="http://voikko.puimula.org/"
 SRC_URI="http://www.puimula.org/voikko-sources/${PN}/${P}.tar.gz"

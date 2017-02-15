@@ -19,3 +19,15 @@ layman -a jps-gentoo
 #### With just GIT
 git clone https://github.com/juippis/jps-gentoo.git
 
+### Staying in Vivaldi-stable channel
+Gentoo's main portage tree includes ebuilds for Vivaldis various versions, but it gets bumped with weekly snapshots and ignores minor fixes for the stable channel. I'll focus on staying in the stable channel, providing those minor fixed versions when ever they are released. 
+
+If you dislike following the -snapshot channel and would like to stay in the stable camp, add the following into your **/etc/portage/package.mask** :
+> www-client/vivaldi-\*::gentoo
+Then issue
+> emerge -av www-client/vivaldi::jps-gentoo
+
+(and optionally *vivaldi-ffmpeg-codecs* as well)
+
+Then keep updating your system regularily to follow the latest stable releases. 
+
