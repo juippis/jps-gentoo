@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=6
 
-# PYTHON_COMPAT=( python{3_4,3_5} )
+PYTHON_COMPAT=( python{2_7,3_4,3_5} )
 
-inherit eutils python
+inherit eutils python-r1
 
 DESCRIPTION="Libvoikko provides spell checking, hyphenation, grammar checking and morphological analysis for Finnish language."
 HOMEPAGE="http://voikko.puimula.org/"
@@ -30,9 +30,10 @@ src_configure() {
 }
 
 src_install() { 
+    python_setup
 	emake DESTDIR="${D}" install
 
-	pythonTmpPath=${D}/usr/$(get_libdir)/$(PYTHON)/site-packages/
+	pythonTmpPath=${D}/usr/$(get_libdir)/${EPYTHON}/site-packages/
 	mkdir -p $pythonTmpPath
 	cp ${S}/python/libvoikko.py $pythonTmpPath || die "copying libvoikko.py failed"
 
