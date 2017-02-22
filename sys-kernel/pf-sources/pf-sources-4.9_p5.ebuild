@@ -16,7 +16,7 @@ inherit kernel-2
 detect_version
 K_NOSETEXTRAVERSION="don't_set_it"
 
-DESCRIPTION="Linux kernel fork with new features (-ck patchset with MuQSS, BFQ and TuxOnIce)"
+DESCRIPTION="Linux kernel fork with new features (-ck patchset with MuQSS, BFQ I/O scheduler, graysky's GCC patch and UKSM)."
 HOMEPAGE="https://pf.natalenko.name/"
 
 UKSMV="0.1.2.5"
@@ -27,8 +27,7 @@ PF_URI="https://pf.natalenko.name/sources/$(get_version_component_range 1-2)/${P
 SRC_URI="
 	${KERNEL_URI} ${PF_URI}
 	https://dev.gentoo.org/~mpagano/genpatches/trunk/${PV/_p*/}/1500_XATTR_USER_PREFIX.patch
-	uksm? ( http://kerneldedup.org/download/uksm/${UKSMV}/uksm-${UKSMV}-for-v${PV/_p*/}.1+.patch
-) 
+	uksm? ( http://kerneldedup.org/download/uksm/${UKSMV}/uksm-${UKSMV}-for-v${PV/_p*/}.1+.patch ) 
 "
 
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"

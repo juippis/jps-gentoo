@@ -35,7 +35,7 @@ Then issue
 Then keep updating your system regularly to follow the latest stable releases. 
 
 ### PF-kernel sources
-I personally use [pf-kernel](https://pf.natalenko.name/) with [UKSM patch](http://kerneldedup.org/en/projects/uksm/), but the ebuilds in Gentoo's main portage tree are always behind, and don't include the UKSM patch. I don't upgrade kernel every time a new one is released, but I do upgrade it when major versions are out, or there are some severe fixes in the minor releases. 
+I personally use [pf-kernel](https://pf.natalenko.name/) with [UKSM patch](http://kerneldedup.org/en/projects/uksm/), but the ebuilds in Gentoo's main portage tree are always behind, and don't include the UKSM patch. I don't upgrade kernel every time a new one is released, but I do upgrade it when major versions are out, or there are some severe fixes in the minor releases. I also have to wait for Nvidia's slow updates.  
 
 ### Contacting
 IRC: Juippis @ Freenode is the fastest way. 
