@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<use>
+  <flag name='expvfst'>Enable experimental features of VFST morphology backend.</flag>
+  <flag name='hfst'>Enable HFST morphology backend.</flag>
+  <flag name='malaga'>Enable Malaga morphology backend.</flag>
+</use>
+</pkgmetadata>
