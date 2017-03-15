@@ -4,9 +4,9 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python{2_7,3_{3,4,5,6}} )
+PYTHON_COMPAT=( python{2_7,3_{3..6}} )
 
-inherit eutils python-r1
+inherit eutils python-r1 python-utils-r1
 
 DESCRIPTION="Libvoikko provides spell checking, hyphenation, grammar checking and morphological analysis for Finnish language."
 HOMEPAGE="http://voikko.puimula.org/"
@@ -44,18 +44,16 @@ src_install() {
     python_setup
 	emake DESTDIR="${D}" install
 
-	pythonTmpPath=${D}/usr/$(get_libdir)/${EPYTHON}/site-packages/
-	mkdir -p $pythonTmpPath
-	cp ${S}/python/libvoikko.py $pythonTmpPath || die "copying libvoikko.py failed"
+	python_foreach_impl python_domodule python/libvoikko.py
 
 }
 
-pkg_postinst() { 
-	ewarn "If you intend to use libvoikko with LibreOffice, "
-	ewarn "make sure your active python interpreter is set "
-	ewarn "to be the same version as PYTHON_SINGLE_TARGET in "
-	ewarn "your installed LibreOffice package. "
-	ewarn " "
-	ewarn "You can set your active Python interpreter with "
-	ewarn "eselect python list" 
-}
+# pkg_postinst() { 
+#	ewarn "If you intend to use libvoikko with LibreOffice, "
+#	ewarn "make sure your active python interpreter is set "
+#	ewarn "to be the same version as PYTHON_SINGLE_TARGET in "
+#	ewarn "your installed LibreOffice package. "
+#	ewarn " "
+#	ewarn "You can set your active Python interpreter with "
+#	ewarn "eselect python list" 
+#}
