@@ -10,7 +10,7 @@ DESCRIPTION="Tools to build LXQt and components maintained by the project."
 HOMEPAGE="https://github.com/lxde/lxqt-build-tools"
 SRC_URI="https://github.com/lxde/${PN}/releases/download/${PV}/${PN}-${PV}.tar.xz"
 
-LICENSE="GPL2"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
