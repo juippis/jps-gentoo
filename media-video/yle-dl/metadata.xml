@@ -4,4 +4,5 @@
 <use>
   <flag name='php'>Use a PHP script as download backend.</flag>
   <flag name='youtube-dl'>Use youtube-dl script as a download backend.</flag>
+</use>
 </pkgmetadata>
