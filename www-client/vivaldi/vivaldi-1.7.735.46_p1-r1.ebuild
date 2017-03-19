@@ -65,6 +65,9 @@ RDEPEND="
 	x11-libs/libXrender
 	x11-libs/libXtst
 	x11-libs/pango[X]
+"
+
+PDEPEND="
 	proprietary-codecs? ( www-plugins/vivaldi-ffmpeg-codecs )
 "
 
