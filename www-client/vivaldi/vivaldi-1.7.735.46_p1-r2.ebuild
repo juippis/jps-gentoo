@@ -27,7 +27,7 @@ LICENSE="Vivaldi"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 
-IUSE="proprietary-codecs"
+IUSE="proprietary-codecs widevine"
 
 RESTRICT="bindist mirror"
 
@@ -69,6 +69,7 @@ RDEPEND="
 
 PDEPEND="
 	proprietary-codecs? ( www-plugins/vivaldi-ffmpeg-codecs )
+	widevine? ( www-plugins/vivaldi-widevine )
 "
 
 QA_PREBUILT="*"
