@@ -27,6 +27,8 @@ LICENSE="Vivaldi"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 
+IUSE="proprietary-codecs"
+
 RESTRICT="bindist mirror"
 
 S=${WORKDIR}
@@ -63,6 +65,7 @@ RDEPEND="
 	x11-libs/libXrender
 	x11-libs/libXtst
 	x11-libs/pango[X]
+	proprietary-codecs? ( www-plugins/vivaldi-ffmpeg-codecs )
 "
 
 QA_PREBUILT="*"
