@@ -16,7 +16,7 @@ IUSE=""
 
 RESTRICT="bindist mirror strip"
 
-DEPEND=">=www-client/vivaldi-1.8"
+DEPEND=">=www-client/vivaldi-1.7"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/opt/google/chrome"
