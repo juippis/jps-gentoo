@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -20,7 +19,7 @@ DEPEND="
 		dev-qt/qtdbus
 		dev-qt/qtwidgets:5
 		lxqt-base/liblxqt
-		lxde-base/lxqt-build-tools
+		dev-util/lxqt-build-tools
 "
 RDEPEND="
 		${DEPEND}
