@@ -5,7 +5,7 @@ EAPI=6
 
 inherit cmake-utils
 
-DESCRIPTION="Pulseaudio mixer in Qt (port of pavucontrol)"
+DESCRIPTION="Pulseaudio mixer in Qt (port of pavucontrol)."
 HOMEPAGE="https://github.com/lxde/pavucontrol-qt"
 SRC_URI="https://github.com/lxde/${PN}/releases/download/${PV}/${PN}-${PV}.tar.xz"
 
@@ -24,10 +24,18 @@ DEPEND="
 RDEPEND="
 		${DEPEND}
 		>=lxqt-base/liblxqt-${PV}
-        media-sound/pulseaudio
+        media-sound/pulseaudio[glib]
         x11-misc/xdg-user-dirs
 "
 
 src_configure() { 
+
+	# The Gentoo-LXQt way
+	local mycmakeargs=(
+		-DPULL_TRANSLATIONS=no
+	)
+
 	cmake-utils_src_configure
+
 }
+
