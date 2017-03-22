@@ -10,6 +10,7 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - vcsi https://github.com/amietn/vcsi
  - vivaldi stable https://www.vivaldi.com
  - vivaldi-ffmpeg-codecs https://www.vivaldi.com
+ - vivaldi-widevine https://www.vivaldi.com
  - voikko http://voikko.puimula.org/
  - yle-dl https://github.com/aajanki/yle-dl
 
@@ -17,8 +18,13 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
 #### With Layman
 layman -a jps-gentoo
 
-#### With just GIT
+#### With repos.conf
+*make a directory for overlays if you don't have one yet* mkdir /var/lib/overlays
+cd /var/lib/overlays
 git clone https://github.com/juippis/jps-gentoo.git
+wget -O /etc/portage/repos.conf/jps-gentoo.conf https://raw.githubusercontent.com/juippis/jps-gentoo/master/jps-gentoo.conf
+*change the path to your overlay directory* vim /etc/portage/repos.conf/jps-gentoo.conf
+emerge --sync
 
 ### Staying in Vivaldi-stable channel
 Gentoo's main portage tree includes ebuilds for Vivaldis various versions, but it gets bumped with weekly snapshots and ignores minor fixes for the stable channel. I'll focus on staying in the stable channel, providing those minor fixed versions when ever they are released. 
