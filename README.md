@@ -20,10 +20,15 @@ layman -a jps-gentoo
 
 #### With repos.conf
 *make a directory for overlays if you don't have one yet* mkdir /var/lib/overlays
+
 cd /var/lib/overlays
+
 git clone https://github.com/juippis/jps-gentoo.git
+
 wget -O /etc/portage/repos.conf/jps-gentoo.conf https://raw.githubusercontent.com/juippis/jps-gentoo/master/jps-gentoo.conf
+
 *change the path to your overlay directory* vim /etc/portage/repos.conf/jps-gentoo.conf
+
 emerge --sync
 
 ### Staying in Vivaldi-stable channel
