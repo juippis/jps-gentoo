@@ -53,11 +53,17 @@ src_prepare() {
 }
 
 src_install() {
-	exeinto /usr/share/yle-dl
-		newexe yle-dl yle-dl.py 
+	if use !php ; then 
+		exeinto /usr/share/yle-dl
+			newexe yle-dl yle-dl.py 
 
-	exeinto /usr/bin
-		doexe "${T}"/yle-dl
+		exeinto /usr/bin
+			doexe "${T}"/yle-dl
+
+	else 
+		emake DESTDIR="${D}" install 
+
+	fi
 	
 	DOCS="COPYING ChangeLog README.fi README.md"
 	einstalldocs
