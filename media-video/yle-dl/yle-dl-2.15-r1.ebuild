@@ -38,15 +38,13 @@ src_prepare() {
 	sed -i 's|/usr/local|/usr|g' Makefile
 
 	if use !php ; then
-		sed -i '/$(DATADIR)/d' Makefile
-
 		cat <<- EOF > "${T}"/yle-dl 
 				#!/bin/bash
 				python2 /usr/share/yle-dl/yle-dl.py --backend youtubedl "\$@"
 			EOF
 	
 	else
-		sed -i 's|/usr/local/share/yle-dl/AdobeHDS.php|/usr/bin/AdobeHDS.php|g' yle-dl
+		sed -i 's|/usr/local/share/yle-dl/AdobeHDS.php|/usr/share/yle-dl/AdobeHDS.php|g' yle-dl
 	fi
 
 	default
