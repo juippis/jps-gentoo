@@ -22,7 +22,7 @@ REQUIRED_USE="
 "
 
 DEPEND="
-	dev-python/pycrypto
+	dev-python/pycrypto[${PYTHON_USEDEP}]
 	php? ( 
 		dev-lang/php[bcmath,curl,crypt,simplexml] 
 		media-video/rtmpdump
@@ -32,8 +32,6 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-# S=${WORKDIR}/aajanki-${PN}-440ecb2
-
 src_prepare() {
 	python_fix_shebang .
 
@@ -41,6 +39,11 @@ src_prepare() {
 
 	if use !php ; then
 		sed -i '/$(DATADIR)/d' Makefile
+
+		cat <<- EOF > "${T}"/yle-dl 
+				#!/bin/bash
+				python2 /usr/share/yle-dl/yle-dl.py --backend youtubedl "\$@"
+			EOF
 	
 	else
 		sed -i 's|/usr/local/share/yle-dl/AdobeHDS.php|/usr/bin/AdobeHDS.php|g' yle-dl
@@ -50,18 +53,12 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install 
+	exeinto /usr/share/yle-dl
+		newexe yle-dl yle-dl.py 
+
+	exeinto /usr/bin
+		doexe "${T}"/yle-dl
 	
 	DOCS="COPYING ChangeLog README.fi README.md"
 	einstalldocs
 }
-
-# fixed in yle-dl, if AdobeHDS.php file isnt found it uses youtube-dl as a default backend. 
-# Needs testing
-# pkg_postinst() { 
-# 	if use !php ; then 
-#		ewarn "It appears you have disabled the PHP USE flag. "
-#		ewarn "You might want to add an alias for yle-dl to use " 
-#		ewarn "youtube-dl as backend ( --backend youtubedl )."
-#	fi
-# }
