@@ -15,14 +15,15 @@ IUSE=""
 
 VIVALDISRCVER="vivaldi"
 PKGSRC="${VIVALDISRCVER}-ffmpeg-codecs-${PV}"
+REV="9.1"
 
 # https://build.opensuse.org/package/view_file/home:Juippis/vivaldi-ffmpeg-codecs/vivaldi-ffmpeg-codecs.spec
 SRC_URI="
-	amd64? ( http://download.opensuse.org/repositories/home:/Juippis/openSUSE_Tumbleweed/x86_64/${PKGSRC}-4.1.x86_64.rpm )
-	x86? ( http://download.opensuse.org/repositories/home:/Juippis/openSUSE_Tumbleweed/i586/${PKGSRC}-4.1.i586.rpm )
+	amd64? ( http://download.opensuse.org/repositories/home:/Juippis/openSUSE_Tumbleweed/x86_64/${PKGSRC}-${REV}.x86_64.rpm )
+	x86? ( http://download.opensuse.org/repositories/home:/Juippis/openSUSE_Tumbleweed/i586/${PKGSRC}-${REV}.i586.rpm )
 "
 
-DEPEND=">=www-client/vivaldi-1.7"
+DEPEND=">=www-client/vivaldi-1.8"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
