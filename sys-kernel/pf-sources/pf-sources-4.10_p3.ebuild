@@ -24,7 +24,7 @@ PF_URI="https://pf.natalenko.name/sources/$(get_version_component_range 1-2)/${P
 SRC_URI="
 	${KERNEL_URI} ${PF_URI}
 	https://dev.gentoo.org/~mpagano/genpatches/trunk/${PV/_p*/}/1500_XATTR_USER_PREFIX.patch
-	uksm? ( https://github.com/dolohow/uksm/blob/master/uksm-${PV/_p*/}.patch )
+	uksm? ( https://raw.githubusercontent.com/dolohow/uksm/master/uksm-${PV/_p*/}.patch )
 "
 
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
