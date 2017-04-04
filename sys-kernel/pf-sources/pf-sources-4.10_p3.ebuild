@@ -1,6 +1,5 @@
 # Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI="5"
 inherit readme.gentoo-r1 toolchain-funcs versionator
@@ -18,8 +17,6 @@ K_NOSETEXTRAVERSION="don't_set_it"
 
 DESCRIPTION="Linux kernel fork with new features (-ck patchset with MuQSS, BFQ I/O scheduler, graysky's GCC patch and UKSM)."
 HOMEPAGE="https://pf.natalenko.name/"
-
-UKSMV="0.1.2.6"
 
 PF_VERS="1"
 PF_FILE="patch-${PV/_p*/}-pf${PV/*_p/}${COMPRESSTYPE}"
