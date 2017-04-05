@@ -15,7 +15,7 @@ IUSE=""
 
 VIVALDISRCVER="vivaldi"
 PKGSRC="${VIVALDISRCVER}-ffmpeg-codecs-${PV}"
-REV="9.1"
+REV="17.1"
 
 # https://build.opensuse.org/package/view_file/home:Juippis/vivaldi-ffmpeg-codecs/vivaldi-ffmpeg-codecs.spec
 SRC_URI="
