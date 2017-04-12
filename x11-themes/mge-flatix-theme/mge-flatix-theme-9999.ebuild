@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit git-r3 gnome2-utils
+inherit git-r3
 
 DESCRIPTION="Flatix Theme created for Manjaro Gnome Edition"
 HOMEPAGE="https://github.com/edskeye/MGE-Flatix-Theme"
@@ -18,11 +18,10 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="cinnamon gnome-shell +gtk2 +gtk3 metacity xfce"
 
-DEPEND="
+DEPEND=""
+RDEPEND="
 	x11-themes/gtk-engines-murrine
 "
-
-RDEPEND="${DEPEND}"
 
 src_install() {
 
