@@ -3,14 +3,14 @@
 
 EAPI=6
 
-inherit git-r3
-
 DESCRIPTION="Flatix Theme created for Manjaro Gnome Edition"
 HOMEPAGE="https://github.com/edskeye/MGE-Flatix-Theme"
-# SRC_URI=""
 
-EGIT_REPO_URI="https://github.com/edskeye/MGE-Flatix-Theme.git"
-EGIT_BRANCH="master"
+MY_PV="b42466a1ea3e46e6a2c309ee33fdf955d1d86dde"
+SRC_URI="https://github.com/edskeye/MGE-Flatix-Theme/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
+
+# EGIT_REPO_URI="https://github.com/edskeye/MGE-Flatix-Theme.git"
+# EGIT_BRANCH="master"
 
 LICENSE="GPL-3.0"
 SLOT="0"
@@ -22,6 +22,8 @@ DEPEND=""
 RDEPEND="
 	x11-themes/gtk-engines-murrine
 "
+
+S="${WORKDIR}"/MGE-Flatix-Theme-${MY_PV}
 
 src_install() {
 
