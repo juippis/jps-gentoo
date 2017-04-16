@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit check-reqs font python-single-r1
 
-DESCRIPTION="Collection of patched fonts with a FontForge font patcher."
+DESCRIPTION="Collection of fonts that are patched to include a high number of glyphs (icons). Also includes a FontForge patcher to patch your own fonts with glyphs."
 HOMEPAGE="http://nerdfonts.com/"
 SRC_URI="https://github.com/ryanoasis/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
