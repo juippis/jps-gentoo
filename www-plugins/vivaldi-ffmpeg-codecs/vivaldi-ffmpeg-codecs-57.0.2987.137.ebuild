@@ -34,7 +34,7 @@ pkg_setup() {
 
 	elif [[ -e "${ROOT}opt/vivaldi-snapshot/vivaldi" ]]; then
 		export VIVALDIVER="vivaldi-snapshot"
-		die || "Vivaldi-snapshot detected. Please install vivaldi-snapshot-ffmpeg-codecs "
+		die || "Vivaldi-snapshot detected. Please install a stable version of Vivaldi."
 
 	else 
 		export VIVALDIVER="" 
