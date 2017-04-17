@@ -9,7 +9,7 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - nerd-fonts https://github.com/ryanoasis/nerd-fonts
  - pavucontrol-qt https://github.com/lxde/pavucontrol-qt
  - pf-sources https://pf.natalenko.name/
- - urxvt-tabbedex https://github.com/stepb/urxvt-tabbedex
+ - urxvt-tabbedex https://github.com/mina86/urxvt-tabbedex
  - vcsi https://github.com/amietn/vcsi
  - vivaldi stable https://www.vivaldi.com
  - vivaldi-ffmpeg-codecs https://www.vivaldi.com
