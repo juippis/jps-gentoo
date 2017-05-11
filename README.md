@@ -21,6 +21,7 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
 #### With Layman
 layman -a jps-gentoo
 
+
 #### With repos.conf
 *make a directory for overlays if you don't have one yet* mkdir /var/lib/overlays
 
@@ -34,22 +35,17 @@ wget -O /etc/portage/repos.conf/jps-gentoo.conf https://raw.githubusercontent.co
 
 emerge --sync
 
-### Staying in Vivaldi-stable channel
-Gentoo's main portage tree includes ebuilds for Vivaldis various versions, but it gets bumped with weekly snapshots and ignores minor fixes for the stable channel. I'll focus on staying in the stable channel, providing those minor fixed versions when ever they are released. 
 
-If you dislike following the -snapshot channel and would like to stay in the stable camp, add the following into your **/etc/portage/package.mask** :
-> www-client/vivaldi\*::gentoo
+### Proprietary codecs for Vivaldi web browser
+vivaldi-ffmpeg-codecs
+vivaldi-widevine
 
-Then issue
+Keeping them up-to-date with the latest stable release of Vivaldi. 
 
-> emerge -av www-client/vivaldi::jps-gentoo
-
-(and optionally *vivaldi-ffmpeg-codecs* as well)
-
-Then keep updating your system regularly to follow the latest stable releases. 
 
 ### PF-kernel sources
-I personally use [pf-kernel](https://pf.natalenko.name/) with [UKSM patch](http://kerneldedup.org/en/projects/uksm/), but the ebuilds in Gentoo's main portage tree are always behind, and don't include the UKSM patch. I don't upgrade kernel every time a new one is released, but I do upgrade it when major versions are out, or there are some severe fixes in the minor releases. I also have to wait for Nvidia's slow updates.  
+Providing [pf-kernel](https://pf.natalenko.name/) with [UKSM patch](http://kerneldedup.org/en/projects/uksm/) patch.
+  
 
 ### Contacting
 IRC: Juippis @ Freenode is the fastest way. 
