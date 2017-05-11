@@ -21,7 +21,7 @@ SRC_URI="
 	x86? ( http://download.opensuse.org/repositories/home:/Juippis/openSUSE_Tumbleweed/i586/${P}-${REV}.i586.rpm )
 "
 
-DEPEND=">=www-plugins/vivaldi-ffmpeg-codecs-${PV}"
+DEPEND=">=www-client/vivaldi-1.9"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
