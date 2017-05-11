@@ -22,25 +22,9 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/opt/google/chrome"
 QA_PREBUILT="*"
 
-pkg_setup() {
-	if [[ -e "${ROOT}opt/vivaldi/vivaldi" ]]; then
-		export VIVALDIVER="vivaldi"
-
-	elif [[ -e "${ROOT}opt/vivaldi-snapshot/vivaldi" ]]; then
-		export VIVALDIVER="vivaldi-snapshot"
-
-	else
-		export VIVALDIVER=""
-		die || "Couldn't locate Vivaldi installation directory."
-
-	fi
-}
-
 src_install() {
 
-	# If installed into /opt/google/chrome which is recommended, it stops working 
-	# 50 % of time for no reason. If installed into vivaldi's dir, it works 100 %
-	insinto /opt/${VIVALDIVER}/
-	doins libwidevinecdm.so
+	insinto /opt/vivaldi/
+		doins libwidevinecdm.so
 
 }
