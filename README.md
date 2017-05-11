@@ -38,13 +38,14 @@ emerge --sync
 
 ### Proprietary codecs for Vivaldi web browser
 vivaldi-ffmpeg-codecs
+
 vivaldi-widevine
 
 Keeping them up-to-date with the latest stable release of Vivaldi. 
 
 
 ### PF-kernel sources
-Providing [pf-kernel](https://pf.natalenko.name/) with [UKSM patch](http://kerneldedup.org/en/projects/uksm/) patch.
+Providing [pf-kernel](https://pf.natalenko.name/) with [UKSM patch](http://kerneldedup.org/en/projects/uksm/).
   
 
 ### Contacting
