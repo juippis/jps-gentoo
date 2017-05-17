@@ -16,7 +16,7 @@ IUSE=""
 
 RESTRICT="bindist mirror strip"
 
-DEPEND=">=www-plugins/vivaldi-ffmpeg-codecs-${PV}"
+DEPEND=">=www-plugins/vivaldi-ffmpeg-codecs-58"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/opt/google/chrome"
