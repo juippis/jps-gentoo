@@ -23,9 +23,7 @@ PF_FILE="patch-${PV/_p*/}-pf${PV/*_p/}${COMPRESSTYPE}"
 PF_URI="https://pf.natalenko.name/sources/$(get_version_component_range 1-2)/${PF_FILE}"
 SRC_URI="
 	${KERNEL_URI} ${PF_URI}
-	https://dev.gentoo.org/~mpagano/genpatches/trunk/${PV/_p*/}/1500_XATTR_USER_PREFIX.patch -> ${PN}-${PV/*_p/}-1500_XATTR_USER_PREFIX.patch
-
-	uksm? ( https://raw.githubusercontent.com/dolohow/uksm/master/uksm-${PV/_p*/}.patch -> ${PN}-${PV/*_p/}-uksm-${PV/_p*/}.patch )
+	https://dev.gentoo.org/~mpagano/genpatches/trunk/${PV/_p*/}/1500_XATTR_USER_PREFIX.patch -> ${PN}-${PV/_p*/}-1500_XATTR_USER_PREFIX.patch
 "
 
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
@@ -64,10 +62,10 @@ pkg_setup(){
 
 src_prepare(){
 	epatch "${DISTDIR}/${PF_FILE}"
-	epatch "${DISTDIR}/${PN}-${PV/*_p/}-1500_XATTR_USER_PREFIX.patch" || die "Applying 1500_XATTR_USER_PREFIX.patch from gentoo-sources failed."
+	epatch "${DISTDIR}/${PN}-${PV/_p*/}-1500_XATTR_USER_PREFIX.patch" || die "Applying 1500_XATTR_USER_PREFIX.patch from gentoo-sources failed."
 
 	if use uksm ; then
-		epatch "${DISTDIR}/${PN}-${PV/*_p/}-uksm-${PV/_p*/}.patch" || die "Applying uksm patch failed."
+		epatch "${FILESDIR}/uksm-v0.1.2.6-4.11.patch" || die "Applying uksm patch failed."
 	fi
 
 	default
