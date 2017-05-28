@@ -24,7 +24,6 @@ PF_URI="https://pf.natalenko.name/sources/$(get_version_component_range 1-2)/${P
 SRC_URI="
 	${KERNEL_URI} ${PF_URI}
 	https://dev.gentoo.org/~mpagano/genpatches/trunk/${PV/_p*/}/1500_XATTR_USER_PREFIX.patch
-	uksm? ( https://raw.githubusercontent.com/dolohow/uksm/master/uksm-${PV/_p*/}.patch )
 "
 
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
@@ -66,7 +65,7 @@ src_prepare(){
 	epatch "${DISTDIR}/1500_XATTR_USER_PREFIX.patch"
 
 	if use uksm ; then
-		epatch "${DISTDIR}/uksm-${PV/_p*/}.patch" || die "Applying uksm patch failed."
+		epatch "${FILESDIR}/uksm-v0.1.2.6-4.10.patch" || die "Applying uksm patch failed."
 	fi
 
 	default
