@@ -10,18 +10,21 @@ inherit distutils-r1
 
 DESCRIPTION="Create thumbnail sheets from video files"
 HOMEPAGE="https://github.com/amietn/vcsi"
-SRC_URI="https://github.com/amietn/${PN}/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/amietn/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-python/pillow-2.8.1 
-		>=dev-python/jinja-2 
-		>=dev-python/numpy-1.9.2 
-		media-video/ffmpeg 
-		media-fonts/dejavu"
+DEPEND="
+	>=dev-python/jinja-2[${PYTHON_USEDEP}] 
+	>=dev-python/numpy-1.9.2[${PYTHON_USEDEP}] 
+	>=dev-python/pillow-2.8.1[${PYTHON_USEDEP}] 
+	>=dev-python/texttable-0.8.8[${PYTHON_USEDEP}] 
+	media-video/ffmpeg 
+	media-fonts/dejavu
+"
 RDEPEND="${DEPEND}"
 
 python_compile() { 
