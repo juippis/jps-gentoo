@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-REV="15.1"
+REV="3.1"
 
 # https://build.opensuse.org/package/view_file/home:Juippis/vivaldi-ffmpeg-codecs/vivaldi-ffmpeg-codecs.spec
 SRC_URI="
