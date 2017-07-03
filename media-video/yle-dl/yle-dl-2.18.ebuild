@@ -23,6 +23,7 @@ REQUIRED_USE="
 
 DEPEND="
 	dev-python/pycrypto[${PYTHON_USEDEP}]
+	media-video/ffmpeg
 	php? ( 
 		dev-lang/php[bcmath,curl,crypt,simplexml] 
 		media-video/rtmpdump
