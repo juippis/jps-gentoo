@@ -15,19 +15,17 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="
-				app-eselect/eselect-gnome-shell-extensions
+	app-eselect/eselect-gnome-shell-extensions
 "
 
 DEPEND="
-		${COMMON_DEPEND} 
-		dev-util/intltool
-		gnome-base/gnome-common
-		gnome-base/gnome-shell
+	${COMMON_DEPEND} 
+	dev-util/intltool
+	gnome-base/gnome-common
+	gnome-base/gnome-shell
 "
 
 RDEPEND="${DEPEND}"
-
-# S="${WORKDIR}/${PN}-${PV/v/}"
 
 src_install() { 
 	
@@ -47,9 +45,7 @@ pkg_postinst() {
 	eselect gnome-shell-extensions update
 	eend $?
 
-	elog "Use eselect gnome-shell-extensions to select the newly installed extension. "
 	elog "You may have to relogin to see the extension. "
-	elog "Install gnome-extra/gnome-tweak-tool for easier configuration. "
 
 }
 
