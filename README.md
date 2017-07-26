@@ -3,6 +3,7 @@
 An overlay containing ebuilds that can't be found on Gentoo's main portage tree. Focus on Finnish software. 
 
  - ahoviewer https://github.com/ahodesuka/ahoviewer
+ - brave web browser https://brave.com/
  - dash-to-panel Gnome-3 extension https://github.com/jderose9/dash-to-panel
  - komorebi https://github.com/iabem97/komorebi
  - mge-flatix-theme https://github.com/edskeye/MGE-Flatix-Theme
@@ -11,7 +12,6 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - pf-sources https://pf.natalenko.name/
  - urxvt-tabbedex https://github.com/mina86/urxvt-tabbedex
  - vcsi https://github.com/amietn/vcsi
- - vivaldi stable https://www.vivaldi.com
  - vivaldi-ffmpeg-codecs https://www.vivaldi.com
  - vivaldi-widevine https://www.vivaldi.com
  - voikko http://voikko.puimula.org/
