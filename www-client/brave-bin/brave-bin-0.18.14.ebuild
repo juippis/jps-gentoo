@@ -19,7 +19,7 @@ SRC_URI="https://github.com/brave/browser-laptop/releases/download/v${PV}dev/Bra
 
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="gnome-base/gconf"
