@@ -22,10 +22,12 @@ REQUIRED_USE="
 "
 
 DEPEND="
+	dev-python/progress[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
+	dev-python/requests[${PYTHON_USEDEP}]
 	media-video/ffmpeg
 	php? ( 
-		dev-lang/php[bcmath,curl,crypt,simplexml] 
+		dev-lang/php[bcmath,cli,curl,crypt,simplexml] 
 		media-video/rtmpdump
 	)
 	youtube-dl? ( net-misc/youtube-dl[python_targets_python2_7] )
