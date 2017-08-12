@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-REV="4.1"
+REV="39.1"
 
 # https://build.opensuse.org/package/view_file/home:Juippis/vivaldi-ffmpeg-codecs/vivaldi-ffmpeg-codecs.spec
 SRC_URI="
@@ -21,7 +21,7 @@ SRC_URI="
 	x86? ( http://download.opensuse.org/repositories/home:/Juippis/openSUSE_Tumbleweed/i586/${P}-${REV}.i586.rpm )
 "
 
-DEPEND=">=www-client/vivaldi-1.10"
+DEPEND=">=www-client/vivaldi-1.11"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
