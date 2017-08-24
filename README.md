@@ -37,11 +37,7 @@ emerge --sync
 
 
 ### Proprietary codecs for Vivaldi web browser
-vivaldi-ffmpeg-codecs
-
-vivaldi-widevine
-
-Keeping them up-to-date with the latest stable release of Vivaldi. 
+Install Vivaldi with proprietary-codecs USE flag enabled, or vivaldi-widevine package. You need [patched ffmpeg](https://github.com/chewi/gentoo/commit/79ec55dcc4857332abf2b880be66aa965f094f6e) that can also be found from this overlay. 
 
 
 ### PF-kernel sources
