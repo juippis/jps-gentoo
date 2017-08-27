@@ -1,10 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=5
+EAPI=6
 
-PYTHON_COMPAT=( python3_3 python3_4 python3_5 )
+PYTHON_COMPAT=( python3_{3..6} )
 
 inherit python-any-r1
 
@@ -27,6 +26,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}/usr/share/voikko/" vvfst-install
-	# dodoc README{,.fi}
+	
+	DOCS="README.md"
+	einstalldocs
 }
 
