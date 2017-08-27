@@ -5,10 +5,8 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - ahoviewer https://github.com/ahodesuka/ahoviewer
  - brave web browser https://brave.com/
  - dash-to-panel Gnome-3 extension https://github.com/jderose9/dash-to-panel
- - komorebi https://github.com/iabem97/komorebi
  - mge-flatix-theme https://github.com/edskeye/MGE-Flatix-Theme
  - nerd-fonts https://github.com/ryanoasis/nerd-fonts
- - pavucontrol-qt https://github.com/lxde/pavucontrol-qt
  - pf-sources https://pf.natalenko.name/
  - urxvt-tabbedex https://github.com/mina86/urxvt-tabbedex
  - vcsi https://github.com/amietn/vcsi
@@ -37,7 +35,7 @@ emerge --sync
 
 
 ### Proprietary codecs for Vivaldi web browser
-Install Vivaldi with proprietary-codecs USE flag enabled, or vivaldi-widevine package. You need [patched ffmpeg](https://github.com/chewi/gentoo/commit/79ec55dcc4857332abf2b880be66aa965f094f6e) that can also be found from this overlay. 
+Install Vivaldi with proprietary-codecs USE flag enabled, or vivaldi-widevine package. You need to install media-video/ffmpeg-9999 with chromium USE flag enabled from Gentoo's main repository.
 
 
 ### PF-kernel sources
