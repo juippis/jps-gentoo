@@ -10,7 +10,6 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - pf-sources https://pf.natalenko.name/
  - urxvt-tabbedex https://github.com/mina86/urxvt-tabbedex
  - vcsi https://github.com/amietn/vcsi
- - vivaldi-ffmpeg-codecs https://www.vivaldi.com
  - vivaldi-widevine https://www.vivaldi.com
  - voikko http://voikko.puimula.org/
  - yle-dl https://github.com/aajanki/yle-dl
@@ -33,14 +32,6 @@ wget -O /etc/portage/repos.conf/jps-gentoo.conf https://raw.githubusercontent.co
 
 emerge --sync
 
-
-### Proprietary codecs for Vivaldi web browser
-Install Vivaldi with proprietary-codecs USE flag enabled, or vivaldi-widevine package. You need to install media-video/ffmpeg-9999 with chromium USE flag enabled from Gentoo's main repository.
-
-
-### PF-kernel sources
-Providing [pf-kernel](https://pf.natalenko.name/) with [UKSM patch](http://kerneldedup.org/en/projects/uksm/).
-  
 
 ### Contacting
 IRC: Juippis @ Freenode is the fastest way. 
