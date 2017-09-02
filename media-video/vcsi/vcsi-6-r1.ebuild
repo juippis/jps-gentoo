@@ -1,10 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
-EAPI=5
+EAPI=6
 
-PYTHON_COMPAT=( python3_5 )
+PYTHON_COMPAT=( python3_{3..6} )
 
 inherit distutils-r1
 
@@ -22,8 +21,8 @@ DEPEND="
 	>=dev-python/numpy-1.9.2[${PYTHON_USEDEP}] 
 	>=dev-python/pillow-2.8.1[${PYTHON_USEDEP}] 
 	>=dev-python/texttable-0.8.8[${PYTHON_USEDEP}] 
-	media-video/ffmpeg 
-	media-fonts/dejavu
+	media-fonts/dejavu 
+	media-video/ffmpeg
 "
 RDEPEND="${DEPEND}"
 
