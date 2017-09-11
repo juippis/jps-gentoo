@@ -8,6 +8,7 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - mge-flatix-theme https://github.com/edskeye/MGE-Flatix-Theme
  - nerd-fonts https://github.com/ryanoasis/nerd-fonts
  - pf-sources https://pf.natalenko.name/
+ - torrench https://kryptxy.github.io/torrench/
  - urxvt-tabbedex https://github.com/mina86/urxvt-tabbedex
  - vcsi https://github.com/amietn/vcsi
  - vivaldi-widevine https://www.vivaldi.com
