@@ -19,7 +19,7 @@ RESTRICT="bindist mirror strip"
 DEPEND=">=www-client/vivaldi-1.11"
 RDEPEND="
 	${DEPEND}
-	media-video/ffmpeg:55.57.57
+	media-video/ffmpeg:0/55.57.57[chromium]
 	>=www-client/vivaldi-1.11
 "
 
