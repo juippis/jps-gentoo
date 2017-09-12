@@ -16,8 +16,12 @@ IUSE=""
 
 RESTRICT="bindist mirror strip"
 
-DEPEND="www-client/vivaldi[system-ffmpeg]"
-RDEPEND="${DEPEND}"
+DEPEND=">=www-client/vivaldi-1.11"
+RDEPEND="
+	${DEPEND}
+	media-video/ffmpeg:55.57.57
+	>=www-client/vivaldi-1.11
+"
 
 S="${WORKDIR}/opt/google/chrome"
 QA_PREBUILT="*"
