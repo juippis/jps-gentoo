@@ -41,7 +41,7 @@ pkg_postinst() {
 	elog "Fetching torrents from TPB/KAT is disabled by default." 
 	elog "Please read docs for configuration instructions." 
 	elog ""
-	elog "https://github.com/kryptxy/torrench#-using-the-pirate-baytpb--kickasstorrentskat--skytorrents"
+	elog "https://github.com/kryptxy/torrench#-using-tpbkatskytnyaaxbit"
 	elog ""
 	elog "Example config.ini installed into /usr/share/${PN}/config.ini.example"
 
