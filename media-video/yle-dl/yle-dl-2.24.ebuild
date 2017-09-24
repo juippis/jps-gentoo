@@ -4,7 +4,6 @@
 EAPI=6
 PYTHON_COMPAT=( python2_7 )
 
-DISTUTILS_SINGLE_IMPL=1
 inherit distutils-r1
 
 DESCRIPTION="Download media files from Yle Areena"
@@ -21,7 +20,11 @@ REQUIRED_USE="
 	|| ( php youtube-dl )
 "
 
-DEPEND="
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+
+RDEPEND="
+	${DEPEND}
+	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/progress[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
@@ -33,17 +36,20 @@ DEPEND="
 	youtube-dl? ( net-misc/youtube-dl[python_targets_python2_7] )
 "
 
-RDEPEND="${DEPEND}"
-
-src_prepare() {
-	python_fix_shebang .
+python_prepare() {
 
 	default
+
+	distutils-r1_python_prepare_all
 }
 
-src_install() {
-	esetup.py install --root="${D}"
-	
+python_compile() { 
+	distutils-r1_python_compile
+}
+
+python_install_all() {	
 	DOCS="COPYING ChangeLog README.fi README.md"
 	einstalldocs
+
+	distutils-r1_python_install_all
 }
