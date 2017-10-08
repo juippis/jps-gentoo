@@ -3,14 +3,14 @@
 
 EAPI=6
 
-DESCRIPTION="An extended version of rxvt-unicode's tabbed perl extension with many new features."
+DESCRIPTION="An extended version of rxvt-unicode's tabbed perl extension"
 HOMEPAGE="https://github.com/mina86/urxvt-tabbedex"
 
 MY_PN=${PN/urxvt-/}
 MY_PV="089d0cb724eeb62fa8a5dfcb00ced7761e794149"
 SRC_URI="https://github.com/mina86/urxvt-tabbedex/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-3.0"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""

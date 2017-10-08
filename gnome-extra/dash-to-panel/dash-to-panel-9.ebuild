@@ -5,11 +5,11 @@ EAPI=6
 
 inherit gnome2-utils
 
-DESCRIPTION="Gnome-shell extension that combines the dash and, application launchers and systray into a single panel."
+DESCRIPTION="Gnome-shell extension that combines the dash, application launchers and systray into a single panel"
 HOMEPAGE="https://github.com/jderose9/dash-to-panel"
 SRC_URI="https://github.com/jderose9/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-2.0"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -19,13 +19,15 @@ COMMON_DEPEND="
 "
 
 DEPEND="
-	${COMMON_DEPEND} 
-	dev-util/intltool
+	${COMMON_DEPEND}
+	dev-util/intltool 
 	gnome-base/gnome-common
 	gnome-base/gnome-shell
 "
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+"
 
 src_install() { 
 	

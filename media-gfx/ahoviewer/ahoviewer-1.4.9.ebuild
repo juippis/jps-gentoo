@@ -1,9 +1,9 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit autotools eutils fdo-mime gnome2-utils
+inherit autotools eutils gnome2-utils xdg-utils
 
 DESCRIPTION="A GTK2 image viewer, manga reader, and booru browser."
 HOMEPAGE="https://github.com/ahodesuka/ahoviewer"

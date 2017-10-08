@@ -12,7 +12,7 @@ SRC_URI="https://github.com/edskeye/MGE-Flatix-Theme/archive/${MY_PV}.tar.gz -> 
 # EGIT_REPO_URI="https://github.com/edskeye/MGE-Flatix-Theme.git"
 # EGIT_BRANCH="master"
 
-LICENSE="GPL-3.0"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 

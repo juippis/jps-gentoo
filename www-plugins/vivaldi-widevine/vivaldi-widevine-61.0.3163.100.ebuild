@@ -5,7 +5,7 @@ EAPI=6
 
 inherit unpacker
 
-DESCRIPTION="A browser plugin designed for the viewing of premium video content, works with Vivaldi web browser."
+DESCRIPTION="A browser plugin for viewing premium video content, works with Vivaldi browser"
 HOMEPAGE="http://www.google.com/chrome"
 SRC_URI="https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${PV}-1_amd64.deb"
 
