@@ -20,7 +20,7 @@ COMMON_DEPEND="
 
 DEPEND="
 	${COMMON_DEPEND}
-	dev-util/intltool 
+	dev-util/intltool
 	gnome-base/gnome-common
 	gnome-base/gnome-shell
 "
@@ -29,19 +29,19 @@ RDEPEND="
 	${DEPEND}
 "
 
-src_install() { 
-	
+src_install() {
+
 	emake INSTALLBASE="${D}/usr/share/gnome-shell/extensions" VERSION=${PV} install
 
 	insinto "/usr/share/glib-2.0/schemas/"
 		doins "schemas/org.gnome.shell.extensions.dash-to-panel.gschema.xml"
 
-	dodoc README.md 
+	dodoc README.md
 
 }
 
-pkg_postinst() { 
-	
+pkg_postinst() {
+
 	gnome2_schemas_update
 	ebegin "Updating list of installed extensions"
 	eselect gnome-shell-extensions update
@@ -50,5 +50,3 @@ pkg_postinst() {
 	elog "You may have to relogin to see the extension. "
 
 }
-
-

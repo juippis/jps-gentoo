@@ -1,9 +1,9 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-PYTHON_COMPAT=( python3_{3..6} )
+PYTHON_COMPAT=( python3_{4..6} )
 
 inherit python-any-r1
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=">=dev-libs/libvoikko-4.0 
-		dev-libs/foma 
+DEPEND=">=dev-libs/libvoikko-4.0
+		dev-libs/foma
 		${PYTHON_DEPS}"
 RDEPEND="${DEPEND}"
 
@@ -26,8 +26,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}/usr/share/voikko/" vvfst-install
-	
+
 	DOCS="README.md"
 	einstalldocs
 }
-

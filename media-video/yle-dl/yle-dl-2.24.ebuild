@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -29,8 +29,8 @@ RDEPEND="
 	dev-python/pycrypto[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	media-video/ffmpeg
-	php? ( 
-		dev-lang/php[bcmath,cli,curl,crypt,simplexml] 
+	php? (
+		dev-lang/php[bcmath,cli,curl,crypt,simplexml]
 		media-video/rtmpdump
 	)
 	youtube-dl? ( net-misc/youtube-dl[python_targets_python2_7] )
@@ -43,11 +43,11 @@ python_prepare() {
 	distutils-r1_python_prepare_all
 }
 
-python_compile() { 
+python_compile() {
 	distutils-r1_python_compile
 }
 
-python_install_all() {	
+python_install_all() {
 	DOCS="COPYING ChangeLog README.fi README.md"
 	einstalldocs
 

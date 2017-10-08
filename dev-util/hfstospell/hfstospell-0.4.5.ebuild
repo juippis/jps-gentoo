@@ -23,11 +23,10 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/hfst-ospell-${PV}
 
-src_configure() { 
+src_configure() {
 
-	eautoreconf || die "Autoconf failed" 
-	econf \ 
-		--prefix=/usr 
+	eautoreconf || die "Autoconf failed"
+	econf \
+		--prefix=/usr
 
 }
-

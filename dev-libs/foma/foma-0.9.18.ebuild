@@ -21,17 +21,15 @@ RDEPEND="${DEPEND}"
 #S="${WORKDIR}/${P}"
 
 src_prepare() {
-	cd "${S}"
-
 	sed -i 's/\/usr\/local/\/usr/' Makefile
 	sed -i 's/-ltermcap/-lncurses/' Makefile
 	sed -i 's/(ldconfig || true)/ /' Makefile
 }
 
-src_compile() { 
-	emake prefix=${D}/usr
+src_compile() {
+	emake prefix="${D}"/usr
 }
 
-src_install() { 
-	emake prefix=${D}/usr install || die "installation failed"
+src_install() {
+	emake prefix="${D}"/usr install || die "installation failed"
 }

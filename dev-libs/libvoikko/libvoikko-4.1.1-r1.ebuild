@@ -29,7 +29,7 @@ src_configure() {
 		myconf_libvoikko+=" $(use_enable expvfst)"
 
 		if ! use hfst ; then
-			myconf_libvoikko+=" --disable-hfst" 
+			myconf_libvoikko+=" --disable-hfst"
 		fi
 
 		myconf_libvoikko+=" --with-dictionary-path=/usr/share/voikko"
@@ -37,10 +37,9 @@ src_configure() {
 	econf ${myconf_libvoikko}
 }
 
-src_install() { 
-    python_setup
+src_install() {
+	python_setup
 	emake DESTDIR="${D}" install
 
 	python_foreach_impl python_domodule python/libvoikko.py
-
 }

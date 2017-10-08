@@ -9,7 +9,6 @@ DESCRIPTION="A GTK2 image viewer, manga reader, and booru browser."
 HOMEPAGE="https://github.com/ahodesuka/ahoviewer"
 SRC_URI="https://github.com/ahodesuka/ahoviewer/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -33,7 +32,7 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	gstreamer? (
-		media-libs/gst-plugins-good:1.0 
+		media-libs/gst-plugins-good:1.0
 		|| (
 			media-plugins/gst-plugins-vpx
 			media-plugins/gst-plugins-libav

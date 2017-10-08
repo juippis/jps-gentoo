@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${PN}-${MY_PV}
 
-src_install() { 
+src_install() {
 
 	insinto /usr/$(get_libdir)/urxvt/perl
 	doins ${MY_PN}

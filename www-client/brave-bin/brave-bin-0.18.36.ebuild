@@ -6,8 +6,8 @@ EAPI=6
 BRAVE_PN="${PN/-bin/}"
 
 CHROMIUM_LANGS="
-	am ar bg bn ca cs da de el en-GB en-US es es-419 et fa fi fil fr gu he hi 
-	hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr sv 
+	am ar bg bn ca cs da de el en-GB en-US es es-419 et fa fi fil fr gu he hi
+	hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr sv
 	sw ta te th tr uk vi zh-CN zh-TW
 "
 
@@ -50,7 +50,7 @@ src_install() {
 
 	dodir ${BRAVE_HOME%/*}
 
-	insinto ${BRAVE_HOME} 
+	insinto ${BRAVE_HOME}
 		doins -r *
 
 	exeinto ${BRAVE_HOME}
@@ -60,8 +60,7 @@ src_install() {
 
 	newicon "${S}/resources/extensions/brave/img/braveAbout.png" "${PN}.png" || die
 	newicon -s 128 "${S}/resources/extensions/brave/img/braveAbout.png" "${PN}.png" || die
-	
-	
+
 	# install-xattr doesnt approve using domenu or doins from FILESDIR
 	# domenu "${FILESDIR}"/${PN}.desktop
 	# mkdir -p "${D}/usr/share/applications"

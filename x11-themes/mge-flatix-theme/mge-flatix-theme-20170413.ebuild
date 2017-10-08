@@ -29,32 +29,32 @@ src_install() {
 
 	dodoc README.md
 
-	if use cinnamon ; then 
+	if use cinnamon ; then
 		insinto /usr/share/themes/MGE-Flatix-Theme/cinnamon
 			doins -r ./cinnamon/*
 	fi
 
-	if use gnome-shell ; then 
+	if use gnome-shell ; then
 		insinto /usr/share/themes/MGE-Flatix-Theme/gnome-shell
 			doins -r ./gnome-shell/*
 	fi
 
-	if use gtk2 ; then 
+	if use gtk2 ; then
 		insinto /usr/share/themes/MGE-Flatix-Theme/gtk-2.0
 			doins -r ./gtk-2.0/*
 	fi
 
-	if use gtk3 ; then 
+	if use gtk3 ; then
 		insinto /usr/share/themes/MGE-Flatix-Theme/gtk-3.0
 			doins -r ./gtk-3.0/*
 	fi
 
-	if use metacity ; then 
+	if use metacity ; then
 		insinto /usr/share/themes/MGE-Flatix-Theme/metacity-1
 			doins -r ./metacity-1/*
 	fi
 
-	if use xfce ; then 
+	if use xfce ; then
 		insinto /usr/share/themes/MGE-Flatix-Theme/xfce-notify-4.0
 			doins -r ./xfce-notify-4.0/*
 
