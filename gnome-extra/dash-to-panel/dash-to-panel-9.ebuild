@@ -18,15 +18,15 @@ COMMON_DEPEND="
 	app-eselect/eselect-gnome-shell-extensions
 "
 
+RDEPEND="
+    ${COMMON_DEPEND}
+"
+
 DEPEND="
-	${COMMON_DEPEND}
+	${RDEPEND}
 	dev-util/intltool
 	gnome-base/gnome-common
 	gnome-base/gnome-shell
-"
-
-RDEPEND="
-	${DEPEND}
 "
 
 src_install() {
