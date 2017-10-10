@@ -14,16 +14,13 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 
-IUSE="php +youtube-dl"
-
-REQUIRED_USE="
-	|| ( php youtube-dl )
-"
+IUSE="php youtube-dl"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 RDEPEND="
 	${DEPEND}
+	( !youtube-dl? ( !php? ( net-misc/wget ) ) )
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/progress[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
