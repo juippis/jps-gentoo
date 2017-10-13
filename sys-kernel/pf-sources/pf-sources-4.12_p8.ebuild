@@ -15,7 +15,7 @@ inherit kernel-2
 detect_version
 K_NOSETEXTRAVERSION="don't_set_it"
 
-DESCRIPTION="Linux kernel fork with new features (-ck patchset with MuQSS, BFQ I/O scheduler, graysky's GCC patch and UKSM)."
+DESCRIPTION="Linux kernel fork with new features (-ck patchset, graysky's GCC patch and UKSM)"
 HOMEPAGE="https://pf.natalenko.name/"
 
 PF_VERS="1"

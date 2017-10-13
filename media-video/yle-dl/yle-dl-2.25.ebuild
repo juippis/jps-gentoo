@@ -34,7 +34,6 @@ RDEPEND="
 "
 
 python_prepare() {
-
 	default
 
 	distutils-r1_python_prepare_all
