@@ -15,7 +15,7 @@ inherit kernel-2
 detect_version
 K_NOSETEXTRAVERSION="don't_set_it"
 
-DESCRIPTION="Linux kernel fork with new features (-ck patchset, graysky's GCC patch and UKSM)"
+DESCRIPTION="Desktop-oriented Linux kernel that incorporates PDS CPU scheduler, graysky's GCC patch, UKSM and blk-mq performance patches"
 HOMEPAGE="https://pf.natalenko.name/"
 
 PF_VERS="1"
