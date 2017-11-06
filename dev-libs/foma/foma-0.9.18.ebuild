@@ -3,6 +3,8 @@
 
 EAPI=6
 
+inherit eutils toolchain-funcs
+
 DESCRIPTION="A set of utilities for constructing finite-state automata and transducers"
 HOMEPAGE="https://code.google.com/p/foma/"
 SRC_URI="https://bitbucket.org/mhulden/foma/downloads/${P}.tar.gz"
@@ -24,6 +26,12 @@ src_prepare() {
 	sed -i 's/\/usr\/local/\/usr/' Makefile
 	sed -i 's/-ltermcap/-lncurses/' Makefile
 	sed -i 's/(ldconfig || true)/ /' Makefile
+
+	if use amd64; then
+		sed -i 's/\/lib/\/lib64/' Makefile
+	fi
+
+	default
 }
 
 src_compile() {
