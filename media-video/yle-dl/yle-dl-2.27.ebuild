@@ -22,6 +22,7 @@ RDEPEND="
 	${DEPEND}
 	( !youtube-dl? ( !php? ( net-misc/wget ) ) )
 	dev-python/lxml[${PYTHON_USEDEP}]
+	dev-python/pyamf[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	media-video/ffmpeg
