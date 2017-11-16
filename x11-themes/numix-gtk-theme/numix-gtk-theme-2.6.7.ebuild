@@ -5,7 +5,7 @@ EAPI=6
 
 inherit eutils
 
-DESCRIPTION="A modern flat theme with a combination of light and dark elements"
+DESCRIPTION="A flat and light theme with a modern look (GNOME, Openbox, Unity, Xfce)"
 HOMEPAGE="http://numixproject.org/"
 SRC_URI="https://github.com/numixproject/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 

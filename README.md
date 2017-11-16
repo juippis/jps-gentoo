@@ -3,10 +3,10 @@
 An overlay containing ebuilds that can't be found on Gentoo's main portage tree. Focus on Finnish software. 
 
  - ahoviewer https://github.com/ahodesuka/ahoviewer
- - brave web browser https://brave.com/
  - dash-to-panel Gnome-3 extension https://github.com/jderose9/dash-to-panel
  - mge-flatix-theme https://github.com/edskeye/MGE-Flatix-Theme
  - nerd-fonts https://github.com/ryanoasis/nerd-fonts
+ - numix-gtk-theme http://numixproject.org/
  - pf-sources https://pf.natalenko.name/
  - urxvt-tabbedex https://github.com/mina86/urxvt-tabbedex
  - vcsi https://github.com/amietn/vcsi
