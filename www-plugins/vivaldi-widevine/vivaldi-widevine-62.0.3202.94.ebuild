@@ -16,7 +16,7 @@ IUSE=""
 
 RESTRICT="bindist mirror strip"
 
-DEPEND=">=www-client/vivaldi-1.12"
+DEPEND=">=www-client/vivaldi-1.13"
 RDEPEND="
 	${DEPEND}
 	media-video/ffmpeg[chromium]
