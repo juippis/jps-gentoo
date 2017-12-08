@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit autotools eutils gnome2-utils xdg-utils
+inherit autotools eutils xdg-utils
 
 DESCRIPTION="A GTK2 image viewer, manga reader, and booru browser."
 HOMEPAGE="https://github.com/ahodesuka/ahoviewer"
@@ -17,7 +17,7 @@ IUSE="+gstreamer libsecret +rar +zip"
 DEPEND="
 	>=dev-cpp/glibmm-2.36.0:2
 	>=dev-cpp/gtkmm-2.20.0:2.4
-	>=dev-libs/libconfig-1.5
+	>=dev-libs/libconfig-1.4
 	dev-libs/libxml2
 	>=net-misc/curl-7.32.0
 	gstreamer? (
@@ -41,38 +41,22 @@ RDEPEND="
 "
 
 src_prepare() {
-
 	default
 	eautoreconf
-
 }
 
 src_configure() {
-
 	econf \
 		$(use_enable gstreamer gst) \
 		$(use_enable libsecret) \
 		$(use_enable rar) \
 		$(use_enable zip)
-
-}
-
-pkg_preinst() {
-
-	gnome2_icon_savelist
-
 }
 
 pkg_postinst() {
-
-	fdo-mime_desktop_database_update
-	gnome2_icon_cache_update
-
+	xdg_desktop_database_update
 }
 
 pkg_postrm() {
-
-	fdo-mime_desktop_database_update
-	gnome2_icon_cache_update
-
+	xdg_desktop_database_update
 }
