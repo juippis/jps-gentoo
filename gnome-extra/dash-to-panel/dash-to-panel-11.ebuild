@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -14,19 +14,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMMON_DEPEND="
-	app-eselect/eselect-gnome-shell-extensions
-"
-
-RDEPEND="
-	${COMMON_DEPEND}
-"
+RDEPEND="gnome-base/gnome-shell"
 
 DEPEND="
 	${RDEPEND}
 	dev-util/intltool
 	gnome-base/gnome-common
-	gnome-base/gnome-shell
 "
 
 src_install() {
@@ -43,9 +36,6 @@ src_install() {
 pkg_postinst() {
 
 	gnome2_schemas_update
-	ebegin "Updating list of installed extensions"
-	eselect gnome-shell-extensions update
-	eend $?
 
 	elog "You may have to relogin to see the extension. "
 

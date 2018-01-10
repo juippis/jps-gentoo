@@ -5,7 +5,9 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - ahoviewer https://github.com/ahodesuka/ahoviewer
  - dash-to-panel Gnome-3 extension https://github.com/jderose9/dash-to-panel
  - mge-flatix-theme https://github.com/edskeye/MGE-Flatix-Theme
- - pf-sources https://pf.natalenko.name/
+ - numix-gtk-theme https://github.com/numixproject/numix-gtk-theme
+ - pf-sources https://pfactum.github.io/pf-kernel/
+ - torrench https://github.com/kryptxy/torrench
  - urxvt-tabbedex https://github.com/mina86/urxvt-tabbedex
  - vcsi https://github.com/amietn/vcsi
  - vivaldi-widevine https://www.vivaldi.com
