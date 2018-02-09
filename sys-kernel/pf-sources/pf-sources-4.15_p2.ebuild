@@ -70,7 +70,7 @@ pkg_setup(){
 src_prepare(){
 	eapply "${DISTDIR}/${P}.patch" || die "Applying ${P}.patch failed."
 
-	# allow user to apply any additional patches without modifing ebuild
+	# allow user to apply any additional patches without modifying ebuild
 	eapply_user
 
 	kernel-2_src_prepare
