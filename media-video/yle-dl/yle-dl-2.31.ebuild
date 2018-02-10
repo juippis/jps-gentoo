@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_{5,6} )
 
 inherit distutils-r1
 
@@ -14,7 +14,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="libav php youtube-dl"
+IUSE="libav php socks5 youtube-dl"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
@@ -24,14 +24,23 @@ RDEPEND="
 	!libav? ( media-video/ffmpeg )
 	dev-python/future[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
-	dev-python/pyamf[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	php? (
 		dev-lang/php[bcmath,cli,curl,crypt,simplexml]
 		media-video/rtmpdump
 	)
-	youtube-dl? ( net-misc/youtube-dl[python_targets_python2_7] )
+	python_targets_python2_7? ( dev-python/pyamf[python_targets_python2_7] )
+	python_targets_python3_5? (
+		dev-python/py3amf[python_targets_python3_5]
+		dev-python/progress[python_targets_python3_5]
+	)
+	python_targets_python3_6? (
+		dev-python/py3amf[python_targets_python3_6]
+		dev-python/progress[python_targets_python3_6]
+	)
+	socks5? ( dev-python/PySocks[${PYTHON_USEDEP}] )
+	youtube-dl? ( net-misc/youtube-dl[${PYTHON_USEDEP}] )
 "
 
 python_prepare() {
