@@ -5,6 +5,7 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - ahoviewer https://github.com/ahodesuka/ahoviewer
  - dash-to-panel Gnome-3 extension https://github.com/jderose9/dash-to-panel
  - deepin-gtk-theme https://www.deepin.org/en/dde/
+ - fd https://github.com/sharkdp/fd
  - la-capitaine-icon-theme https://krourke.org/projects/art/la-capitaine-icon-theme
  - mge-flatix-theme https://github.com/edskeye/MGE-Flatix-Theme
  - numix-gtk-theme https://github.com/numixproject/numix-gtk-theme
