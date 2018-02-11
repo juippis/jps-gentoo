@@ -3,8 +3,8 @@
 
 EAPI=6
 
-# 6.2.0 dependencies: https://raw.githubusercontent.com/sharkdp/fd/6be33fbf3368127932870b34a7d743f38ec69b6b/Cargo.lock
-# curl -s https://raw.githubusercontent.com/sharkdp/fd/6be33fbf3368127932870b34a7d743f38ec69b6b/Cargo.lock | sed '0,/\[metadata\]/d' | cut -d' ' -f2- | sed -r 's/\s+/\-/' | cut -d ' ' -f 1 | sed 's/^/\t/'
+# 6.3.0 dependencies: https://raw.githubusercontent.com/sharkdp/fd/a6086abe7f4cbe44f9b85b44a87eb22f16c1f068/Cargo.lock
+# curl -s https://raw.githubusercontent.com/sharkdp/fd/a6086abe7f4cbe44f9b85b44a87eb22f16c1f068/Cargo.lock | sed '0,/\[metadata\]/d' | cut -d' ' -f2- | sed -r 's/\s+/\-/' | cut -d ' ' -f 1 | sed 's/^/\t/'
 CRATES="
 	aho-corasick-0.6.4
 	ansi_term-0.10.2
