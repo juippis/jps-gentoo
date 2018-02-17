@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -11,7 +11,7 @@ CHROMIUM_LANGS="
 	sw ta te th tr uk vi zh-CN zh-TW
 "
 
-inherit chromium-2 xdg-utils
+inherit chromium-2 gnome2-utils xdg-utils
 
 DESCRIPTION="Brave Web Browser"
 HOMEPAGE="https://brave.com"
@@ -42,7 +42,7 @@ RDEPEND="
 
 QA_PREBUILT="*"
 
-S="${WORKDIR}/Brave-linux-x64"
+S="${WORKDIR}/${BRAVE_PN}-linux-x64"
 
 src_prepare() {
 	pushd "${S}/locales" > /dev/null || die
@@ -69,18 +69,18 @@ src_install() {
 	newicon -s 128 "${S}/resources/extensions/brave/img/braveAbout.png" "${PN}.png" || die
 
 	# install-xattr doesnt approve using domenu or doins from FILESDIR
-	# domenu "${FILESDIR}"/${PN}.desktop
-	# mkdir -p "${D}/usr/share/applications"
 	cp "${FILESDIR}"/${PN}.desktop "${S}"
 	domenu "${S}"/${PN}.desktop
 }
 
 pkg_postinst() {
+	gnome2_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
 }
 
 pkg_postrm() {
+	gnome2_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
 }

@@ -3,6 +3,7 @@
 An overlay containing ebuilds that can't be found on Gentoo's main portage tree. Focus on Finnish software. 
 
  - ahoviewer https://github.com/ahodesuka/ahoviewer
+ - brave web browser https://brave.com/
  - dash-to-panel Gnome-3 extension https://github.com/jderose9/dash-to-panel
  - deepin-gtk-theme https://www.deepin.org/en/dde/
  - fd https://github.com/sharkdp/fd
