@@ -35,7 +35,7 @@ UNIPATCH_STRICTORDER="yes"
 inherit kernel-2
 detect_version
 
-DESCRIPTION="Desktop-oriented Linux kernel fork that incorporates PDS CPU scheduler, graysky's GCC patch, UKSM, BFQ fixes, blk-mq performance patches and Gentoo's basic genpatches"
+DESCRIPTION="Linux kernel fork that includes pf-kernel patch and Gentoo's genpatches"
 
 PF_URI="https://github.com/pfactum/pf-kernel/compare/v${PV/_p*/}...v${PV/_p*/}-pf${PV/*_p/}.diff -> ${P}.patch"
 SRC_URI="
