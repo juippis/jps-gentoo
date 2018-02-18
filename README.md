@@ -8,6 +8,7 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - deepin-gtk-theme https://www.deepin.org/en/dde/
  - fd https://github.com/sharkdp/fd
  - la-capitaine-icon-theme https://krourke.org/projects/art/la-capitaine-icon-theme
+ - luv-icon-theme https://www.gnome-look.org/p/1193830/
  - mge-flatix-theme https://github.com/edskeye/MGE-Flatix-Theme
  - numix-gtk-theme https://github.com/numixproject/numix-gtk-theme
  - pf-sources https://pfactum.github.io/pf-kernel/
