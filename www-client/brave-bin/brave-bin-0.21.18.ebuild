@@ -28,7 +28,6 @@ RDEPEND="
 	dev-libs/libgcrypt
 	dev-libs/nss
 	gnome-base/gvfs
-	gnome-base/libgnome-keyring
 	media-libs/alsa-lib
 	net-print/cups
 	sys-apps/gawk
