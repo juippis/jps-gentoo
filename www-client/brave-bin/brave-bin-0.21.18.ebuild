@@ -20,7 +20,7 @@ SRC_URI="https://github.com/brave/browser-laptop/releases/download/v${PV}dev/Bra
 LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="gnome-keyring"
 
 DEPEND="gnome-base/gconf:2"
 RDEPEND="
@@ -39,6 +39,7 @@ RDEPEND="
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst
 	x11-misc/xdg-utils
+	gnome-keyring? ( >=gnome-base/libgnome-keyring-3.12:= )
 "
 
 QA_PREBUILT="*"
