@@ -79,9 +79,18 @@ src_install() {
 }
 
 pkg_postinst() {
+
 	gnome2_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
+
+	elog "NOTE: If you are using a variant of debian-sources kernel, Brave-bin "
+	elog "may not start due to sandboxing error. You can get around this error "
+	elog "by adding the following line into /etc/sysctl.conf: "
+	elog " kernel.unprivileged_userns_clone = 1"
+	elog "and then running sysctl -p"
+	elog "Running Brave-bin with --no-sandbox is NOT recommended!"
+	
 }
 
 pkg_postrm() {
