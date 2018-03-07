@@ -45,6 +45,10 @@ QA_PREBUILT="*"
 
 S="${WORKDIR}/${BRAVE_PN}-linux-x64"
 
+pkg_setup() {
+	chromium_suid_sandbox_check_kernel_config
+}
+
 src_prepare() {
 	pushd "${S}/locales" > /dev/null || die
 		chromium_remove_language_paks

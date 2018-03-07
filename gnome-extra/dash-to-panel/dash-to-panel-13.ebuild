@@ -5,7 +5,7 @@ EAPI=6
 
 inherit gnome2-utils
 
-DESCRIPTION="Gnome-shell extension that combines the dash, application launchers and systray into a single panel"
+DESCRIPTION="An icon taskbar for the Gnome Shell"
 HOMEPAGE="https://github.com/jderose9/dash-to-panel"
 SRC_URI="https://github.com/jderose9/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
