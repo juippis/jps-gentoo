@@ -14,12 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="gnome-base/gnome-shell"
-
 DEPEND="
-	${RDEPEND}
+	dev-libs/glib:2
 	dev-util/intltool
 	gnome-base/gnome-common
+"
+RDEPEND="
+	gnome-base/gnome-shell
 "
 
 src_install() {
