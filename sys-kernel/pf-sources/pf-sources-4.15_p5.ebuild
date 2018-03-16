@@ -48,21 +48,12 @@ SRC_URI="
 KV_FULL="${PVR}-pf"
 S="${WORKDIR}/linux-${KV_FULL}"
 
-pkg_pretend() {
-	# https://bugs.gentoo.org/show_bug.cgi?id=547868
-	if [[ $(gcc-version) < 4.9 ]]; then
-			eerror ""
-			eerror "${P} needs an active GCC 4.9+ compiler"
-			eerror ""
-			die "${P} needs an active sys-devel/gcc >= 4.9"
-	fi
-}
-
 pkg_setup(){
 	ewarn
 	ewarn "${PN} is *not* supported by the Gentoo Kernel Project in any way."
-	ewarn "If you need support, please contact the pf developers directly."
-	ewarn "Do *not* open bugs in Gentoo's bugzilla."
+	ewarn "If you need support with the kernel, please contact the pf "
+	ewarn "developers directly. If you need support with the ebuild, contact the "
+	ewarn "package maintainer. Do *not* open bugs in Gentoo's bugzilla."
 	ewarn
 	kernel-2_pkg_setup
 }
