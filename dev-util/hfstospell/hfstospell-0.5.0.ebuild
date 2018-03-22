@@ -24,7 +24,11 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/hfst-ospell-${PV}
 
 src_prepare() {
+
+	default
+
 	eautoreconf || die "Autoconf failed"
+
 }
 
 src_configure() {
