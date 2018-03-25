@@ -6,7 +6,6 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - brave web browser https://brave.com/
  - dash-to-panel Gnome-3 extension https://github.com/jderose9/dash-to-panel
  - deepin-gtk-theme https://www.deepin.org/en/dde/
- - fd https://github.com/sharkdp/fd
  - la-capitaine-icon-theme https://krourke.org/projects/art/la-capitaine-icon-theme
  - luv-icon-theme https://www.gnome-look.org/p/1193830/
  - mge-flatix-theme https://github.com/edskeye/MGE-Flatix-Theme
@@ -19,6 +18,11 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - yle-dl https://github.com/aajanki/yle-dl
 
 ### Installing
+#### With eselect-repository
+eselect repository list | grep jps-gentoo
+eselect repository enable xxx
+
+
 #### With Layman
 layman -a jps-gentoo
 
