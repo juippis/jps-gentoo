@@ -20,6 +20,7 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
 ### Installing
 #### With eselect-repository
 eselect repository list | grep jps-gentoo
+
 eselect repository enable xxx
 
 
