@@ -25,18 +25,24 @@ IUSE="gnome-keyring"
 DEPEND="gnome-base/gconf:2"
 RDEPEND="
 	${DEPEND}
+	app-accessibility/at-spi2-atk
+	dev-libs/atk
+	dev-libs/expat
+	dev-libs/glib
 	dev-libs/libgcrypt
+	dev-libs/nspr
 	dev-libs/nss
-	gnome-base/gvfs
+	dev-libs/openssl
 	media-libs/alsa-lib
 	net-print/cups
-	sys-apps/gawk
-	>=sys-libs/libcap-2
-	virtual/libudev
+	sys-apps/dbus
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
 	x11-libs/libnotify
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst
+	x11-libs/pango
 	x11-misc/xdg-utils
 	gnome-keyring? ( >=gnome-base/libgnome-keyring-3.12:= )
 "
@@ -50,11 +56,11 @@ pkg_setup() {
 }
 
 src_prepare() {
+	default
+
 	pushd "${S}/locales" > /dev/null || die
 		chromium_remove_language_paks
 	popd > /dev/null || die
-
-	default
 }
 
 src_install() {
@@ -68,18 +74,17 @@ src_install() {
 	exeinto ${BRAVE_HOME}
 		doexe brave
 
-	dosym ${BRAVE_HOME}/brave /usr/bin/${PN} || die
+	dosym ${BRAVE_HOME}/brave /usr/bin/${PN}
 
-	newicon "${S}/resources/extensions/brave/img/braveAbout.png" "${PN}.png" || die
-	newicon -s 128 "${S}/resources/extensions/brave/img/braveAbout.png" "${PN}.png" || die
+	newicon "${S}/resources/extensions/brave/img/braveAbout.png" "${PN}.png"
+	newicon -s 128 "${S}/resources/extensions/brave/img/braveAbout.png" "${PN}.png"
 
 	# install-xattr doesnt approve using domenu or doins from FILESDIR
-	cp "${FILESDIR}"/${PN}.desktop "${S}"
+	cp "${FILESDIR}"/${PN}.desktop "${S}" || die "Copying ${PN}.desktop failed."
 	domenu "${S}"/${PN}.desktop
 }
 
 pkg_postinst() {
-
 	gnome2_icon_cache_update
 	xdg_desktop_database_update
 	xdg_mimeinfo_database_update
@@ -90,7 +95,6 @@ pkg_postinst() {
 	elog " kernel.unprivileged_userns_clone = 1"
 	elog "and then running sysctl -p"
 	elog "Running Brave-bin with --no-sandbox is NOT recommended!"
-
 }
 
 pkg_postrm() {
