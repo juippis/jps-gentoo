@@ -1,11 +1,13 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
 
-inherit autotools eutils xdg-utils
+GNOME2_EAUTORECONF="yes"
 
-DESCRIPTION="A GTK2 image viewer, manga reader, and booru browser."
+inherit gnome2 xdg-utils
+
+DESCRIPTION="A GTK2 image viewer, manga reader, and booru browser"
 HOMEPAGE="https://github.com/ahodesuka/ahoviewer"
 SRC_URI="https://github.com/ahodesuka/ahoviewer/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
@@ -41,22 +43,28 @@ RDEPEND="
 "
 
 src_prepare() {
-	default
-	eautoreconf
+	gnome2_src_prepare
 }
 
 src_configure() {
-	econf \
-		$(use_enable gstreamer gst) \
-		$(use_enable libsecret) \
-		$(use_enable rar) \
+	local myconf_ahoviewer=(
+		$(use_enable gstreamer gst)
+		$(use_enable libsecret)
+		$(use_enable rar)
 		$(use_enable zip)
+	)
+
+	gnome2_src_configure "${myconf_ahoviewer[@]}"
 }
 
 pkg_postinst() {
+	gnome2_icon_cache_update
 	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }
 
 pkg_postrm() {
+	gnome2_icon_cache_update
 	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }
