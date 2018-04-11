@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -10,14 +10,16 @@ MY_PN="Py3AMF"
 
 DESCRIPTION="A fork of PyAMF to support Python3"
 HOMEPAGE="https://github.com/StdCarrot/Py3AMF"
-SRC_URI="https://github.com/StdCarrot/${MY_PN}/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/StdCarrot/${MY_PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="
+	${PYTHON_DEPS}
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="
 	${DEPEND}
 	dev-python/defusedxml[${PYTHON_USEDEP}]
