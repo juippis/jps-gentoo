@@ -29,7 +29,7 @@ RDEPEND="
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/mini-amf[${PYTHON_USEDEP}]
 	dev-python/progress[${PYTHON_USEDEP}]
-	dev-python/pycryptodome[${PYTHON_USEDEP}]
+	dev-python/pycryptodomex[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	php? (
 		dev-lang/php[bcmath,cli,curl,simplexml]
