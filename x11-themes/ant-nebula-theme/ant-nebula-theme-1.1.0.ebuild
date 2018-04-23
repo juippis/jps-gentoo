@@ -3,9 +3,11 @@
 
 EAPI=6
 
+MY_PN="Ant-Nebula"
+
 DESCRIPTION="Nebula variant of the Ant theme "
 HOMEPAGE="https://www.gnome-look.org/p/1099856/"
-SRC_URI="https://github.com/EliverLara/Ant-Nebula/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/EliverLara/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -13,6 +15,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gnome-shell gtk2 +gtk3 metacity unity xfce"
 
 RDEPEND="gtk2? ( x11-themes/gtk-engines-murrine )"
+
+S="${WORKDIR}"/"${MY_PN}"-"${PV}"
 
 src_install() {
 	if use gnome-shell ; then
