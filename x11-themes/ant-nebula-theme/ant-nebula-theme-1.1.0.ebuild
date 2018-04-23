@@ -32,6 +32,8 @@ src_install() {
 	if use gtk3 ; then
 		insinto /usr/share/themes/${PN}
 			doins -r ./gtk-3.20
+
+		dosym gtk-3.20 /usr/share/themes/${PN}/gtk-3.0
 	fi
 
 	if use metacity ; then
