@@ -38,7 +38,7 @@ RDEPEND="
 	sys-apps/dbus
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
-	x11-libs/gtk+:2
+	x11-libs/gtk+:3
 	x11-libs/libnotify
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst
@@ -64,17 +64,17 @@ src_prepare() {
 }
 
 src_install() {
-	declare BRAVE_HOME=/opt/${BRAVE_PN}
+	local brave_home=/opt/${BRAVE_PN}
 
-	dodir ${BRAVE_HOME%/*}
+	dodir ${brave_home%/*}
 
-	insinto ${BRAVE_HOME}
+	insinto ${brave_home}
 		doins -r *
 
-	exeinto ${BRAVE_HOME}
+	exeinto ${brave_home}
 		doexe brave
 
-	dosym ${BRAVE_HOME}/brave /usr/bin/${PN}
+	dosym ${brave_home}/brave /usr/bin/${PN}
 
 	newicon "${S}/resources/extensions/brave/img/braveAbout.png" "${PN}.png"
 	newicon -s 128 "${S}/resources/extensions/brave/img/braveAbout.png" "${PN}.png"
