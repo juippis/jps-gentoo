@@ -8,6 +8,7 @@ KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 HOMEPAGE="
 	https://pfactum.github.io/pf-kernel/
 	https://dev.gentoo.org/~mpagano/genpatches/
+	https://git.archlinux.org/svntogit/packages.git/tree/trunk?h=packages/linux
 "
 
 IUSE=""
