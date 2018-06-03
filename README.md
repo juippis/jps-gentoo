@@ -14,7 +14,6 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
  - pf-sources https://pfactum.github.io/pf-kernel/
  - torrench https://github.com/kryptxy/torrench
  - urxvt-tabbedex https://github.com/mina86/urxvt-tabbedex
- - vcsi https://github.com/amietn/vcsi
  - voikko http://voikko.puimula.org/
  - yle-dl https://github.com/aajanki/yle-dl
 
