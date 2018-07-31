@@ -21,9 +21,9 @@ src_prepare() {
 	default
 
 	cd "${S}"
-		rm -rf .github
-		rm -rf .product
-		rm -rf configure
+	rm -rf .github || die
+	rm -rf .product || die
+	rm -rf configure || die
 
 }
 
