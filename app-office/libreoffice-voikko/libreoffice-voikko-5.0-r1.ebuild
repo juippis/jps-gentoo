@@ -1,7 +1,7 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 DESCRIPTION="Free Finnish spell checking and hyphenation for LibreOffice"
 HOMEPAGE="https://voikko.puimula.org/"
@@ -38,10 +38,23 @@ pkg_postinst() {
 	COMPONENT="${ROOT}/usr/$(get_libdir)/libreoffice/share/extension/install/voikko.oxt"
 
 	einfo "Trying to register ${COMPONENT}..."
-	unopkg add --shared "${COMPONENT}" || die "unopkg failed."
+	unopkg add --shared "${COMPONENT}"
+	if [[ $? == 0 ]] ; then
+		einfo "${PN} registered succesfully with LibreOffice."
+	else
+		eerror "Couldn’t register ${PN} with LibreOffice."
+	fi
 }
 
 pkg_prerm() {
 	# Remove voikko registration from libreoffice
-	unopkg remove --shared org.puimula.ooovoikko || die "unopkg failed."
+	unopkg remove --shared org.puimula.ooovoikko
+	if [[ $? == 0 ]] ; then
+		einfo "${PN} removed succesfully from LibreOffice."
+	else
+		eerror "Couldn't remove ${PN} from LibreOffice, "
+		eerror "manual removal might be needed with "
+		eerror "  unopkg list --shared"
+		eerror "  unopkg remove --shared VOIKKO-IDENTIFIER"
+	fi
 }
