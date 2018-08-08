@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<use>
-  <flag name='cinnamon'>Install Cinnamon theme.</flag>
-  <flag name='gnome-shell'>Install Gnome-shell / Gnome-3 theme.</flag>
-  <flag name="gtk2">Install GTK-2 theme.</flag>
-  <flag name="gtk3">Install GTK-3 theme.</flag>
-  <flag name="metacity">Install Metacity / Gnome-2 theme.</flag>
-  <flag name="xfce">Install XFce theme.</flag>
-</use>
+  <maintainer type="person">
+    <email>juippis@gmail.com</email>
+  </maintainer>
+  <use>
+    <flag name='cinnamon'>Install Cinnamon theme.</flag>
+    <flag name='gnome-shell'>Install Gnome-shell / Gnome-3 theme.</flag>
+    <flag name="gtk2">Install GTK-2 theme.</flag>
+    <flag name="gtk3">Install GTK-3 theme.</flag>
+    <flag name="metacity">Install Metacity / Gnome-2 theme.</flag>
+    <flag name="xfce">Install XFce theme.</flag>
+  </use>
 </pkgmetadata>
