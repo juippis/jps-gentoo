@@ -44,8 +44,3 @@ RDEPEND="
 python_test() {
 	esetup.py test
 }
-
-src_install() {
-	default
-	dodoc yledl.conf.sample
-}
