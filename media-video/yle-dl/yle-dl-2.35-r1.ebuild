@@ -17,22 +17,21 @@ KEYWORDS="~amd64 ~x86"
 IUSE="libav php socks5 test youtube-dl"
 
 DEPEND="
-	${PYTHON_DEPS}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/pytest-runner )
+	test? ( dev-python/pytest-runner[${PYTHON_USEDEP}] )
 "
-
 RDEPEND="
-	${DEPEND}
 	( !youtube-dl? ( !php? ( net-misc/wget ) ) )
 	!libav? ( media-video/ffmpeg )
-	dev-python/configargparse[${PYTHON_USEDEP}]
+	~dev-python/attrs-17.4.0[${PYTHON_USEDEP}]
+	>=dev-python/configargparse-0.13.0[${PYTHON_USEDEP}]
 	dev-python/future[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/mini-amf[${PYTHON_USEDEP}]
 	dev-python/progress[${PYTHON_USEDEP}]
 	dev-python/pycryptodomex[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	php? (
 		dev-lang/php[bcmath,cli,curl,simplexml]
 		>=dev-libs/openssl-1.0.2:0=
