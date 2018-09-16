@@ -4,8 +4,6 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
 
  - ahoviewer https://github.com/ahodesuka/ahoviewer
  - ant-nebula theme https://www.gnome-look.org/p/1099856/
- - brave web browser https://brave.com/
- - dash-to-panel Gnome-3 extension https://github.com/jderose9/dash-to-panel
  - deepin-gtk-theme https://www.deepin.org/en/dde/
  - la-capitaine-icon-theme https://krourke.org/projects/art/la-capitaine-icon-theme
  - luv-icon-theme https://www.gnome-look.org/p/1193830/
