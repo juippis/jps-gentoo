@@ -23,15 +23,20 @@ DEPEND="
 	dev-libs/libxml2
 	dev-libs/libsigc++:2
 	net-misc/curl:=
+	gnutls? ( net-misc/curl[curl_ssl_gnutls] )
 	gstreamer? (
 		media-libs/gst-plugins-bad:1.0
 		media-libs/gstreamer:1.0
 	)
+	libressl? ( net-misc/curl[curl_ssl_libressl] )
 	libsecret? ( app-crypt/libsecret )
 	rar? ( app-arch/unrar )
+	ssl? (
+		libressl? ( net-misc/curl[curl_ssl_libressl] )
+		!libressl? ( net-misc/curl[curl_ssl_openssl] )
+	)
 	zip? ( dev-libs/libzip )
 "
-
 RDEPEND="
 	${DEPEND}
 	gstreamer? (
@@ -42,25 +47,20 @@ RDEPEND="
 			media-plugins/gst-plugins-libav
 		)
 	)
-	ssl? (
-		gnutls? ( net-misc/curl[curl_ssl_gnutls] )
-		!gnutls? (
-			libressl? ( net-misc/curl[curl_ssl_libressl] )
-			!libressl? ( net-misc/curl[curl_ssl_openssl] )
-		)
-	)
-
+"
+REQUIRED_USE="
+	?? ( gnutls ssl )
+	libressl? ( ssl )
 "
 
 src_configure() {
 	local myconf=(
+		$(use_enable gnutls)
 		$(use_enable gstreamer gst)
 		$(use_enable libsecret)
 		$(use_enable rar)
+		$(use_enable ssl)
 		$(use_enable zip)
-	)
-	(use ssl || use gnutls) && myconf+=(
-		--enable-$(usex gnutls gnutls $(usex ssl ssl))
 	)
 
 	gnome2_src_configure "${myconf[@]}"
