@@ -2,7 +2,6 @@
 
 An overlay containing ebuilds that can't be found on Gentoo's main portage tree. Focus on Finnish software. 
 
- - ahoviewer https://github.com/ahodesuka/ahoviewer
  - ant-nebula theme https://www.gnome-look.org/p/1099856/
  - deepin-gtk-theme https://www.deepin.org/en/dde/
  - la-capitaine-icon-theme https://krourke.org/projects/art/la-capitaine-icon-theme
