@@ -1,5 +1,3 @@
-
-
 [Torrench-Config]
 
 ## Torrench - Command-line torrent search program
@@ -36,9 +34,8 @@ RARBG_URL = https://torrentapi.org/pubapi_v2.php?
 1337X_URL = https://1337x.to https://1337x.unblockall.org https://proxyportal.net/1337x-proxy
 IDOPE_URL = https://idope.se
 LIBGEN_URL = http://libgen.io/
+LIMETORRENTS_URL = https://limetorrents.cc https://swaptorrents.com
 
 ## To enable TPB indexing, 
 ## set enable = 1
-enable = 0
-
-
+enable = 1
