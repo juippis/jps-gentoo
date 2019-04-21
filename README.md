@@ -4,10 +4,10 @@ An overlay containing ebuilds that can't be found on Gentoo's main portage tree.
 
  - la-capitaine-icon-theme https://krourke.org/projects/art/la-capitaine-icon-theme
  - luv-icon-theme https://www.gnome-look.org/p/1193830/
- - pf-sources https://pfactum.github.io/pf-kernel/
+ - pf-sources https://gitlab.com/post-factum/pf-kernel/wikis/README
  - urxvt-tabbedex https://github.com/mina86/urxvt-tabbedex
  - voikko http://voikko.puimula.org/
- - yle-dl https://github.com/aajanki/yle-dl
+ - yle-dl https://aajanki.github.io/yle-dl/index-en.html
 
 ### Installing
 #### With eselect-repository
