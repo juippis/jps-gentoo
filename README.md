@@ -2,11 +2,8 @@
 
 An overlay containing ebuilds that can't be found on Gentoo's main portage tree. Focus on Finnish software. 
 
- - ant-nebula theme https://www.gnome-look.org/p/1099856/
- - deepin-gtk-theme https://www.deepin.org/en/dde/
  - la-capitaine-icon-theme https://krourke.org/projects/art/la-capitaine-icon-theme
  - luv-icon-theme https://www.gnome-look.org/p/1193830/
- - mge-flatix-theme https://github.com/edskeye/MGE-Flatix-Theme
  - pf-sources https://pfactum.github.io/pf-kernel/
  - urxvt-tabbedex https://github.com/mina86/urxvt-tabbedex
  - voikko http://voikko.puimula.org/
@@ -22,7 +19,9 @@ layman -a jps-gentoo
 
 
 #### With repos.conf
-*make a directory for overlays if you don't have one yet* mkdir /var/db/repos
+*make a directory for overlays if you don't have one yet* 
+
+mkdir /var/db/repos
 
 cd /var/db/repos
 
